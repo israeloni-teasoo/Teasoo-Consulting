@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seplat Tree4Life — Case Study</title>
+<meta name="description" content="Restoring 6,000 hectares of Edo State forest reserve — a Teasoo Consulting case study of the Seplat Tree4Life reforestation programme. High-fidelity redesign concept.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Libre+Franklin:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+:root{
+  --paper:#ffffff; --bg:#f5f7fb; --navy:#0e2038; --navy2:#16294685; --graphite:#2c3a4f;
+  --ink:#0f1e33; --body:#414c5e; --muted:#6b7789; --line:#e3e8f0;
+  --red:#e31a38; --red-d:#c4152e; --green:#1a7a3c; --green-d:#125c2d; --green-soft:#eaf5ee;
+  --serif:"Spectral",Georgia,"Times New Roman",serif;
+  --sans:"Libre Franklin",system-ui,-apple-system,Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  --maxw:1080px; --radius:14px;
+  --shadow:0 1px 2px rgba(15,30,51,.06),0 16px 40px rgba(15,30,51,.07);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--body);font-family:var(--sans);font-size:16.5px;line-height:1.62;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+img{max-width:100%;display:block}
+h1,h2,h3,h4{font-family:var(--serif);color:var(--ink);line-height:1.15;margin:0;font-weight:600;letter-spacing:-.01em;text-wrap:balance}
+p{margin:0}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 26px}
+.lbl{font-family:var(--mono);text-transform:uppercase;letter-spacing:.13em;font-size:.7rem;font-weight:500;color:var(--muted)}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.rule{height:2px;width:44px;background:var(--red);border-radius:2px}
+
+/* header */
+.nav{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--paper) 92%,transparent);
+  backdrop-filter:blur(10px) saturate(140%);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:20px;height:66px}
+.nav img{height:34px;width:auto}
+.nav .links{display:flex;gap:22px;margin-left:12px}
+.nav .links a{font-size:.9rem;font-weight:600;color:var(--graphite)}
+.nav .links a:hover{color:var(--red)}
+.nav .sp{flex:1}
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--sans);font-weight:700;font-size:.9rem;
+  padding:.72rem 1.25rem;border-radius:8px;border:2px solid transparent;cursor:pointer;transition:.15s}
+.btn:hover{transform:translateY(-1px)}
+.btn--red{background:var(--red);color:#fff}.btn--red:hover{background:var(--red-d)}
+.btn--dark{background:var(--navy);color:#fff}.btn--dark:hover{background:#0a1832}
+.btn--ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.6)}.btn--ghost:hover{background:rgba(255,255,255,.14)}
+.btn--outline{background:#fff;color:var(--ink);border-color:var(--line)}.btn--outline:hover{border-color:var(--ink)}
+@media (max-width:760px){.nav .links{display:none}}
+
+/* breadcrumb */
+.crumb{border-bottom:1px solid var(--line);background:var(--paper)}
+.crumb .wrap{padding:11px 26px;font-family:var(--mono);font-size:.72rem;letter-spacing:.04em;color:var(--muted)}
+.crumb a:hover{color:var(--red)}
+.crumb b{color:var(--ink);font-weight:500}
+
+/* hero */
+.hero{position:relative;isolation:isolate;color:#fff;background:var(--navy)}
+.hero__bg{position:absolute;inset:0;z-index:-2;background-size:cover;background-position:center}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(105deg,rgba(9,20,38,.93) 0%,rgba(11,26,46,.82) 45%,rgba(11,26,46,.5) 100%)}
+.hero .wrap{padding:66px 26px 40px}
+.hero .eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.hero .eyebrow .tg{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;
+  color:#bfe6c9;border:1px solid rgba(191,230,201,.35);border-radius:999px;padding:4px 11px}
+.hero h1{color:#fff;font-size:clamp(2.1rem,5vw,3.4rem);font-weight:700;letter-spacing:-.02em;max-width:16ch}
+.hero .dek{color:#dbe6f2;font-size:1.18rem;max-width:52ch;margin-top:18px}
+/* snapshot */
+.snapshot{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:38px;
+  border:1px solid rgba(255,255,255,.16);border-radius:12px;overflow:hidden;background:rgba(255,255,255,.04)}
+.snapshot div{padding:16px 18px;border-right:1px solid rgba(255,255,255,.13)}
+.snapshot div:last-child{border-right:0}
+.snapshot .k{font-family:var(--mono);font-size:.63rem;letter-spacing:.1em;text-transform:uppercase;color:#93a7c4}
+.snapshot .v{color:#fff;font-weight:600;font-size:.95rem;margin-top:4px}
+@media (max-width:760px){.snapshot{grid-template-columns:1fr 1fr}.snapshot div:nth-child(2n){border-right:0}}
+
+/* metric band */
+.metrics{background:var(--paper);border-bottom:1px solid var(--line)}
+.metrics .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;padding:40px 26px}
+.metric{position:relative;padding-left:18px}
+.metric::before{content:"";position:absolute;left:0;top:5px;bottom:5px;width:3px;border-radius:2px;background:var(--green)}
+.metric .n{font-family:var(--serif);font-size:clamp(1.8rem,3.2vw,2.5rem);font-weight:700;color:var(--ink);line-height:1;font-variant-numeric:tabular-nums}
+.metric .l{font-size:.86rem;color:var(--muted);margin-top:8px}
+@media (max-width:760px){.metrics .wrap{grid-template-columns:1fr 1fr;gap:22px}}
+
+/* sections */
+.sec{padding:56px 0}
+.sec .wrap{max-width:var(--maxw)}
+.eyebrow-row{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+.two h2{font-size:1.6rem;margin-bottom:12px}
+.two p{font-size:1.02rem}
+.did{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.did li{display:grid;grid-template-columns:26px 1fr;gap:10px;align-items:start;font-size:.98rem;color:var(--ink)}
+.did li .n{font-family:var(--mono);font-size:.78rem;color:var(--red);font-weight:600;padding-top:3px}
+@media (max-width:760px){.two{grid-template-columns:1fr;gap:26px}}
+
+/* impact split with photo */
+.impact{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.impact .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center;padding:56px 26px}
+.impact-list{display:flex;flex-direction:column;gap:18px;margin-top:10px}
+.impact-item{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:baseline}
+.impact-item .big{font-family:var(--serif);font-weight:700;color:var(--green-d);font-size:1.5rem;min-width:112px;font-variant-numeric:tabular-nums}
+.impact-item p{font-size:.95rem}
+.impact figure{margin:0;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.impact figure img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/5}
+.impact figcaption{font-family:var(--mono);font-size:.66rem;color:var(--muted);padding:8px 2px 0}
+@media (max-width:760px){.impact .wrap{grid-template-columns:1fr;gap:28px}.impact figure img{aspect-ratio:16/10}}
+
+/* quote */
+.quote{background:var(--navy);color:#fff}
+.quote .wrap{padding:64px 26px;max-width:860px;text-align:center}
+.quote blockquote{font-family:var(--serif);font-size:clamp(1.4rem,3vw,2rem);line-height:1.36;margin:0;color:#fff;font-weight:400}
+.quote .mk{font-family:var(--serif);font-size:3rem;color:var(--green);line-height:0;height:26px;display:block}
+.quote cite{display:block;margin-top:22px;font-style:normal;font-family:var(--mono);font-size:.78rem;letter-spacing:.06em;color:#9db4d6;text-transform:uppercase}
+.standards{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:26px}
+.standards span{font-family:var(--mono);font-size:.72rem;color:#cdd9ec;border:1px solid rgba(255,255,255,.2);border-radius:999px;padding:5px 12px}
+
+/* gallery strip */
+.strip{background:var(--paper);border-bottom:1px solid var(--line)}
+.strip .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:14px 26px}
+.strip img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:8px}
+@media (max-width:760px){.strip .wrap{grid-template-columns:1fr 1fr}}
+
+/* approach chips */
+.approach .wrap{padding:52px 26px;max-width:var(--maxw)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.chips span{background:var(--green-soft);color:var(--green-d);border:1px solid #cfe7d7;font-weight:600;
+  font-size:.85rem;padding:6px 13px;border-radius:999px}
+
+/* related */
+.related{background:var(--bg)}
+.related .wrap{padding:56px 26px}
+.rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px}
+.rcard{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:.18s}
+.rcard:hover{transform:translateY(-4px);box-shadow:0 24px 50px rgba(15,30,51,.12)}
+.rcard .rimg{height:130px;background-size:cover;background-position:center}
+.rcard .rb{padding:18px}
+.rcard .rt{font-family:var(--mono);font-size:.64rem;letter-spacing:.09em;text-transform:uppercase;color:var(--green-d);margin-bottom:9px}
+.rcard h3{font-size:1.06rem;margin-bottom:6px}
+.rcard p{font-size:.85rem;color:var(--muted)}
+@media (max-width:760px){.rgrid{grid-template-columns:1fr}}
+
+/* cta */
+.cta{background:linear-gradient(120deg,#0b1a2e,#16294a);color:#fff}
+.cta .wrap{padding:60px 26px;text-align:center;max-width:720px}
+.cta h2{color:#fff;font-size:1.9rem}
+.cta p{color:#c9d5e6;margin-top:10px}
+.cta .row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:26px}
+
+/* footer */
+footer{background:var(--navy);color:#8fa0b8;padding:40px 0;font-size:.85rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between}
+footer img{height:30px;filter:brightness(0) invert(1);opacity:.9}
+.concept-flag{position:fixed;bottom:14px;right:14px;z-index:50;background:var(--red);color:#fff;
+  font-family:var(--mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;padding:6px 11px;border-radius:999px;box-shadow:var(--shadow)}
+:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="wrap">
+    <img src="assets/img/teasoo-logo-full.png" alt="Teasoo Consulting">
+    <div class="links">
+      <a href="#">What we do</a><a href="#">Industries</a><a href="#">Our impact</a><a href="#">Insights</a><a href="#">About</a>
+    </div>
+    <span class="sp"></span>
+    <a class="btn btn--red" href="#contact">Contact us</a>
+  </div>
+</header>
+
+<div class="crumb"><div class="wrap"><a href="#">Home</a> / <a href="#">Our impact</a> / <b>Seplat Tree4Life</b></div></div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero__bg" style="background-image:url('assets/img/t4l-aerial.jpg')"></div>
+  <div class="wrap">
+    <div class="eyebrow"><span class="rule"></span><span class="tg">Case study · Environmental &amp; Sustainability</span></div>
+    <h1>Restoring 6,000 hectares of Edo State forest reserve</h1>
+    <p class="dek">How Teasoo helped Seplat Energy design, govern and deliver one of Nigeria's largest corporate reforestation programmes — from strategy to trees in the ground.</p>
+    <div class="snapshot">
+      <div><div class="k">Client</div><div class="v">Seplat Energy</div></div>
+      <div><div class="k">Sector</div><div class="v">Energy &amp; Extractives</div></div>
+      <div><div class="k">Timeline</div><div class="v">Jul 2024 – Jun 2029</div></div>
+      <div><div class="k">Location</div><div class="v">Ehor Forest Reserve, Edo</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- METRICS -->
+<section class="metrics">
+  <div class="wrap">
+    <div class="metric"><div class="n">230,000</div><div class="l">trees planted to date</div></div>
+    <div class="metric"><div class="n">6,000 ha</div><div class="l">forest reserve under restoration</div></div>
+    <div class="metric"><div class="n">1.4M t</div><div class="l">CO₂ projected sequestration</div></div>
+    <div class="metric"><div class="n">₦300M+</div><div class="l">mobilised into the programme</div></div>
+  </div>
+</section>
+
+<!-- CHALLENGE + WHAT WE DID -->
+<section class="sec">
+  <div class="wrap two">
+    <div>
+      <div class="eyebrow-row"><span class="rule"></span><span class="lbl">The challenge</span></div>
+      <h2>A pledge to plant, without a system to deliver</h2>
+      <p>Seplat had committed to a landmark reforestation programme in a degraded Edo State reserve — but needed a credible way to design it, engage host communities, meet international standards, and prove the carbon and biodiversity impact to regulators and investors.</p>
+    </div>
+    <div>
+      <div class="eyebrow-row"><span class="rule"></span><span class="lbl">What we did</span></div>
+      <ul class="did">
+        <li><span class="n">01</span><span>Designed the five-year restoration strategy and phased planting plan with the Forestry Commission.</span></li>
+        <li><span class="n">02</span><span>Built the community engagement and benefit-sharing model across five host communities.</span></li>
+        <li><span class="n">03</span><span>Stood up MRV — measurement, reporting &amp; verification — for carbon and biodiversity.</span></li>
+        <li><span class="n">04</span><span>Aligned the programme to IFRS/ISSB and GHG Protocol for audit-ready disclosure.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- IMPACT -->
+<section class="impact">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow-row"><span class="rule"></span><span class="lbl">The impact</span></div>
+      <h2 style="font-size:1.7rem;margin-bottom:6px">Measurable, and built to last</h2>
+      <div class="impact-list">
+        <div class="impact-item"><span class="big">230,000</span><p>native trees established across the reserve in the first planting cycles, with survival tracked plot-by-plot.</p></div>
+        <div class="impact-item"><span class="big">5</span><p>host communities engaged, with plantation guards and nursery jobs created locally.</p></div>
+        <div class="impact-item"><span class="big">1.4M t</span><p>CO₂ projected sequestration over the programme's carbon horizon.</p></div>
+        <div class="impact-item"><span class="big">100%</span><p>of activity aligned to a governance framework regulators and assurers can trust.</p></div>
+      </div>
+    </div>
+    <figure>
+      <img src="assets/img/t4l2-planting.jpg" alt="Community members planting saplings in the reserve">
+      <figcaption>Planting underway with host-community teams, Ehor Forest Reserve.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- QUOTE + STANDARDS -->
+<section class="quote">
+  <div class="wrap">
+    <span class="mk">&ldquo;</span>
+    <blockquote>Teasoo gave a bold environmental commitment the structure, governance and evidence base it needed to become real — and defensible.</blockquote>
+    <cite>Programme partner · Seplat Tree4Life</cite>
+    <div class="standards"><span>IFRS S1 &amp; S2</span><span>GHG Protocol</span><span>Edo State Forestry Commission</span><span>University of Benin</span></div>
+  </div>
+</section>
+
+<!-- GALLERY STRIP -->
+<section class="strip">
+  <div class="wrap">
+    <img src="assets/img/t4l-nursery.jpg" alt="Nursery beds">
+    <img src="assets/img/t4l2-hands.jpg" alt="Planting a sapling">
+    <img src="assets/img/t4l2-community.jpg" alt="Community gathering">
+    <img src="assets/img/t4l2-species.jpg" alt="Species plot signage">
+  </div>
+</section>
+
+<!-- APPROACH -->
+<section class="approach">
+  <div class="wrap">
+    <div class="eyebrow-row"><span class="rule"></span><span class="lbl">How we worked</span></div>
+    <h2 style="font-size:1.5rem;max-width:24ch">Strategy, delivery and assurance — under one roof</h2>
+    <p style="max-width:60ch;margin-top:10px">Teasoo ran the programme end-to-end: setting the strategy, standing up the operating model, and building the reporting that turns fieldwork into credible disclosure.</p>
+    <div class="chips">
+      <span>Restoration strategy</span><span>Community &amp; benefit-sharing</span><span>Species selection</span>
+      <span>Nursery &amp; operations</span><span>MRV &amp; carbon</span><span>Governance &amp; standards</span><span>Investor-grade reporting</span>
+    </div>
+  </div>
+</section>
+
+<!-- RELATED -->
+<section class="related">
+  <div class="wrap">
+    <div class="eyebrow-row"><span class="rule"></span><span class="lbl">Related work</span></div>
+    <h2 style="font-size:1.5rem">More from Sustainability &amp; ESG</h2>
+    <div class="rgrid">
+      <a class="rcard" href="#"><div class="rimg" style="background-image:url('assets/img/community-students.jpg')"></div>
+        <div class="rb"><div class="rt">Governance</div><h3>Corporate Governance &amp; ESG Integration</h3><p>Embedding ESG into board oversight and reporting.</p></div></a>
+      <a class="rcard" href="#"><div class="rimg" style="background-image:url('assets/img/forest-canopy.jpg')"></div>
+        <div class="rb"><div class="rt">Environment</div><h3>Niger Delta Mangrove Restoration</h3><p>Baseline assessment and restoration roadmap.</p></div></a>
+      <a class="rcard" href="#"><div class="rimg" style="background-image:url('assets/img/biodiversity-bird.jpg')"></div>
+        <div class="rb"><div class="rt">Reporting</div><h3>ISSB-Aligned Sustainability Report</h3><p>An audit-ready disclosure under IFRS S1 &amp; S2.</p></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="contact">
+  <div class="wrap">
+    <h2>Planning an environmental or sustainability programme?</h2>
+    <p>Teasoo takes commitments from pledge to proof — strategy, delivery and reporting in one team.</p>
+    <div class="row">
+      <a class="btn btn--red" href="mailto:info@teasooconsulting.com">Talk to our team</a>
+      <a class="btn btn--ghost" href="#">⤓ Download the full report (PDF)</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <img src="assets/img/teasoo-logo-full.png" alt="Teasoo Consulting">
+    <span>© 2026 Teasoo Consulting · Turning strategy into measurable impact.</span>
+  </div>
+</footer>
+
+<span class="concept-flag">Redesign concept · high-fidelity</span>
+</body>
+</html>
