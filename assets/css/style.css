@@ -49,7 +49,7 @@ p{margin:0 0 1rem}
 .lead{font-size:1.15rem;color:var(--slate)}
 .center{text-align:center}
 .measure{max-width:720px}
-.center .measure{margin-left:auto;margin-right:auto}
+.center .measure,.center.measure{margin-left:auto;margin-right:auto}
 
 /* ---------- Buttons ---------- */
 .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.82rem 1.5rem;border-radius:8px;
