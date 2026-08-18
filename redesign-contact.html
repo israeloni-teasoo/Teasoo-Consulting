@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — Teasoo Consulting</title>
+<meta name="description" content="Contact Teasoo Consulting — start a conversation about strategy, sustainability, governance, people or technology.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Libre+Franklin:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="assets/redesign.css">
+
+</head>
+<body>
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="redesign-home.html"><img src="assets/img/teasoo-logo-full.png" alt="Teasoo Consulting"></a>
+    <div class="links" id="menu"><a href="redesign-capability-esg.html">What we do</a><a href="redesign-impact.html">Our impact</a><a href="redesign-insights.html">Insights</a><a href="redesign-about.html">About</a></div>
+    <span class="sp"></span>
+    <a class="btn btn--red" href="redesign-contact.html">Contact us</a>
+    <button class="nav-toggle" id="tg" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="phero">
+  <div class="wrap">
+    <p class="crumb-in"><a href="redesign-home.html">Home</a> / <b>Contact</b></p>
+    <p class="eyebrow">Start the conversation</p>
+    <h1>Let's talk about your <em>next decision</em></h1>
+    <p class="dek">Tell us what you're trying to achieve. We'll come back with how Teasoo can help — and who's best placed to lead it.</p>
+  </div>
+</section>
+<section class="sec">
+  <div class="wrap">
+    <div class="form">
+      <form onsubmit="return false">
+        <div class="grid g2" style="margin-top:0;gap:16px">
+          <div class="field"><label>Full name</label><input type="text" placeholder="Your name"></div>
+          <div class="field"><label>Organisation</label><input type="text" placeholder="Company / government body"></div>
+        </div>
+        <div class="grid g2" style="margin-top:0;gap:16px">
+          <div class="field"><label>Email</label><input type="email" placeholder="you@organisation.com"></div>
+          <div class="field"><label>What do you need?</label><select><option>Sustainability &amp; ESG</option><option>Strategy &amp; Advisory</option><option>Government &amp; Policy</option><option>People &amp; Organisation</option><option>Digital &amp; Technology (ESG Horizon)</option></select></div>
+        </div>
+        <div class="field"><label>How can we help?</label><textarea rows="5" placeholder="A few lines on your goal or challenge"></textarea></div>
+        <button class="btn btn--red" type="submit">Send message <span class="arrow">&rarr;</span></button>
+        <p style="font-family:var(--mono);font-size:.72rem;color:var(--muted);margin-top:12px">Prototype form — not wired to a backend.</p>
+      </form>
+      <aside class="contact-side">
+        <div class="eyebrow-row"><span class="rule"></span><span class="lbl">Reach us</span></div>
+        <p style="margin-bottom:14px"><a href="mailto:info@teasooconsulting.com" style="color:var(--red);font-weight:700">info@teasooconsulting.com</a><br>+234 803 443 3595<br><span style="color:var(--muted);font-size:.85rem">Mon–Fri, 9:00–17:00</span></p>
+        <div class="off">
+          <span><b>Benin City</b>43 Oghosa Crescent, Off Ihama Road, GRA</span>
+          <span><b>Lagos</b>1b Akinyemi Avenue, Lekki Phase 1</span>
+          <span><b>Abuja</b>House 7, Block 2, Zuru Close, Area 8 Garki</span>
+        </div>
+        <p style="margin-top:16px;font-size:.82rem;color:var(--muted)">Serving clients across Africa — to a global standard.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fg">
+      <div>
+        <img class="flogo" src="assets/img/teasoo-logo-full.png" alt="Teasoo Consulting">
+        <p style="max-width:38ch">Turning strategy into measurable impact — African expertise, held to a global standard.</p>
+        <p style="margin-top:12px"><a href="mailto:info@teasooconsulting.com">info@teasooconsulting.com</a> &middot; +234 803 443 3595</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="redesign-capability-esg.html">What we do</a></li>
+          <li><a href="redesign-impact.html">Our impact</a></li>
+          <li><a href="redesign-insights.html">Insights</a></li>
+          <li><a href="redesign-about.html">About</a></li>
+          <li><a href="redesign-contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Offices</h4>
+        <div class="off">
+          <span><b>Benin City</b>43 Oghosa Crescent, Off Ihama Road, GRA</span>
+          <span><b>Lagos</b>1b Akinyemi Avenue, Lekki Phase 1</span>
+          <span><b>Abuja</b>House 7, Block 2, Zuru Close, Area 8 Garki</span>
+        </div>
+      </div>
+    </div>
+    <div class="bar"><span>&copy; 2026 Teasoo Consulting. All rights reserved.</span><span class="lbl">Pan-African &middot; going global</span></div>
+  </div>
+</footer>
+<span class="concept-flag">Redesign concept &middot; prototype</span>
+<script>
+  var t=document.getElementById('tg'),m=document.getElementById('menu');
+  if(t){t.addEventListener('click',function(){m.classList.toggle('open')});}
+</script>
+</body>
+</html>
