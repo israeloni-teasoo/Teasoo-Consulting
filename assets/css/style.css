@@ -400,14 +400,13 @@ p{margin:0 0 1rem}
 .ta-stories .head h2{text-transform:uppercase}
 .story-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:28px;border-radius:14px;overflow:hidden;box-shadow:var(--shadow-lg)}
 .sc{padding:28px 22px;min-height:230px;display:flex;flex-direction:column}
-.sc h3{font-size:1.05rem;margin-bottom:.5em}
-.sc p{font-size:.9rem;margin:0}
-.sc .arrow{margin-top:auto;font-size:1.4rem;font-weight:800}
+.sc h3{font-size:1.05rem;margin-bottom:.5em;color:#fff}
+.sc p{font-size:.9rem;margin:0;color:rgba(255,255,255,.92)}
+.sc .arrow{margin-top:auto;font-size:1.4rem;font-weight:800;color:#fff}
 .sc-1{background:var(--green);color:#fff}
-.sc-2{background:var(--green-dd);color:#eaf6ee}
-.sc-3{background:#c98a2b;color:#fff}
-.sc-4{background:var(--leaf);color:#0b3d1f}
-.sc-4 h3{color:#0b3d1f}
+.sc-2{background:var(--green-dd);color:#fff}
+.sc-3{background:#b07a1e;color:#fff}
+.sc-4{background:var(--green-d);color:#fff}
 
 /* full-width CTA banner */
 .ta-banner{position:relative;isolation:isolate;color:#fff;min-height:420px;display:flex;align-items:center}
