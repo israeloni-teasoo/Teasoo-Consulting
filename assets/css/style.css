@@ -91,7 +91,10 @@ p{margin:0 0 1rem}
 .nav{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.97);
   backdrop-filter:saturate(160%) blur(8px);border-bottom:1px solid var(--line)}
 .nav .container{display:flex;align-items:center;justify-content:space-between;min-height:74px;gap:18px}
-.brand img{height:44px;width:auto}
+.brand img{height:54px;width:auto}
+.t4l-lead-partner{max-width:520px;margin:26px auto 0;text-align:center}
+.t4l-lead-partner img{height:74px;width:auto;margin-bottom:14px}
+.t4l-lead-partner p{color:var(--muted);margin:0}
 .menu{display:flex;align-items:center;gap:2px;list-style:none;margin:0;padding:0}
 .menu > li{position:relative}
 .menu > li > a{display:block;padding:11px 13px;color:var(--ink);font-weight:600;font-size:.94rem;border-radius:7px}

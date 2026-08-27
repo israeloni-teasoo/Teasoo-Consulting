@@ -1,71 +1,59 @@
-# Teasoo Consulting — Tree4Life page prototype
+# Teasoo Consulting — website prototype
 
-A self-contained, static HTML/CSS prototype that adds a **Tree4Life** project page to
-the Teasoo Consulting website, plus the homepage **flagship** feature and a new
-top-level **Projects** navigation menu.
+A self-contained, static HTML/CSS prototype of the Teasoo Consulting website, including
+the homepage, a **Products** menu (ESG Horizon), and a top-level **Projects** menu with
+project pages — led by the **Tree4Life** reforestation flagship and the **Unilever**
+stakeholder-management case study.
 
 > **Why a static prototype?** The live site (teasooconsulting.com) runs on
 > **WordPress** (Astra theme + Elementor Pro). Its pages are built visually inside
 > WordPress, not from files in a git repo — so code committed here does not
 > auto-publish to the live site. This prototype faithfully reproduces the brand and
-> the new page so it can be **reviewed, hosted as-is, or used as an exact build spec**
-> for rebuilding the page in Elementor.
+> the new pages so they can be **reviewed, hosted as-is, or used as an exact build spec**
+> for rebuilding in Elementor.
 
 ## What's here
 
 | File | Purpose |
 |------|---------|
-| `index.html` | Homepage — existing look, **new Projects menu**, and the **Tree4Life flagship** section. |
-| `tree4life.html` | The full **Tree4Life** project page (the new page). |
+| `index.html` | Homepage — existing look, **Projects** and **Products** menus, and the **Tree4Life flagship** section. |
+| `tree4life.html` | The **Tree4Life** reforestation project page. |
+| `unilever.html` | The **Unilever** stakeholder-management project page. |
+| `products.html`, `esg-horizon.html` | Products overview + the ESG Horizon flagship. |
 | `assets/css/style.css` | Shared stylesheet: Teasoo brand chrome + the forest-green project theme. |
-| `assets/img/` | Optimised photos (from the 2024 Seplat Tree4Life deck) + Teasoo/Seplat logos. |
+| `assets/img/` | Optimised photos + Teasoo/ESG Horizon logos. |
 
 No build step, no dependencies, no external requests. **Open `index.html` in a browser**,
 or serve the folder (`python3 -m http.server`) and visit `/`.
 
-## Design decisions
+## Content & branding rules (applied)
 
-- **Chrome matches the live site.** Palette taken from the live Elementor global kit
-  (blue `#046bd2`, slate `#1e293b`/`#334155`, light bg `#F0F5FA`) with the red Teasoo
-  logo. Header top-bar, sticky nav with dropdowns, and footer mirror the current site.
-- **The new "Projects" menu** is a top-level dropdown; **Tree4Life** is its first item,
-  flagged `FLAGSHIP`. The other existing case studies are listed as siblings.
-- **The Tree4Life page** is modelled on the requested inspiration
-  (treeaid.org/projects/tond-tenga): full-bleed hero → impact stats → about → why it
-  matters → aims → goal quote → how it works → indigenous species → community &
-  stories → 5-year roadmap → gallery → partners → CTA.
-- **Forest-green content theme** is layered on the Tree4Life page only — thematically
-  right for reforestation and consistent with the inspiration — while header/footer
-  stay on-brand.
+- **No public financial figures** anywhere — the one exception is a quantified cost
+  *saving* Teasoo delivered (e.g. "saved ₦300M in operational cost").
+- **No third-party sponsor branding.** Project pages present the work as Teasoo's own
+  (e.g. **Tree4Life**), name other partners only where appropriate, and do **not** brand
+  pages with a client/sponsor's name, logo, or photos without their approval. Other
+  companies may be mentioned; the energy sponsor is not named.
+- **Outcomes, not method.** Project pages publish results, impact and Teasoo capability —
+  not internal strategy, selection process, or methodology that competitors could copy.
+- **Global positioning.** Pages are written to sit alongside leading global firms and
+  aligned to recognised international standards.
 
-## Project facts used (source: 2024 Seplat Energy Tree4Life report)
+## Tree4Life page (current structure)
 
-- Launched 2022; Edo State forest reserve, Nigeria.
-- Goal: **1,000,000 trees in 5 years**, rehabilitating **6,000 hectares**.
-- 25-year MoU (renewable +25) → **~50 years** of carbon sequestration.
-- Host communities: Obagie, Igieduma, Erua, Iruhie, Oke (1.6 km farming buffer,
-  10% of seedlings shared as food trees, locally-trained plantation guards).
-- Indigenous species incl. White/Black Afara, Opepe, Mahogany, Obeche, Okha, Odo,
-  bamboo (10 identified with the Edo State Forestry Commission).
-- Phased planting: 30k → 200k → 280k → 280k → 210k.
-- Partners: Seplat Energy, Edo State Government / Forestry Commission,
-  University of Benin (School of Life Sciences), Teasoo Consulting.
+Full-bleed hero → outcome stats → why it matters → Teasoo capability
+("from strategy to a standing forest") → impact outcomes → global-standard alignment
+(UN Decade on Ecosystem Restoration, Bonn Challenge / AFR100) → community outcomes →
+gallery → delivered-by (Teasoo) & partners → CTA. Forest-green content theme on the
+project page only; header/footer stay on-brand.
 
 ## Porting to WordPress / Elementor
 
-1. Add a new page **Tree4Life** and set its permalink under a `/projects/` parent.
-2. In **Appearance → Menus** (or the Elementor header template), add a **Projects**
-   menu item and nest **Seplat Tree4Life Reforestation** beneath it.
-3. Rebuild the sections with Elementor containers using this prototype as the visual
-   reference. The stats band, alternating text/image rows, card grids, timeline and
-   gallery all map to standard Elementor widgets.
-4. Upload the images in `assets/img/` to the Media Library (or use higher-resolution
-   originals from the project deck / Drive).
-5. On the homepage, add the **flagship** section (single image container with overlay,
-   heading, three stats and a button linking to the Tree4Life page).
-
-## Media
-
-Photos were selected and optimised from the *2024 Seplat Energy Tree4Life* presentation.
-Additional field photos and summary videos are available in the project's Google Drive
-folder and can be swapped in during the WordPress build.
+1. Add each project as a page under a `/projects/` parent and nest it under a **Projects**
+   menu item in the Elementor header template.
+2. Rebuild sections with Elementor containers using this prototype as the visual
+   reference (stat bands, alternating text/image rows, card grids, gallery).
+3. Upload the images in `assets/img/` to the Media Library, or swap in higher-resolution
+   originals and approved stock/field media during the build.
+4. On the homepage, add the **flagship** section (image container with overlay, heading,
+   three stats and a button linking to the project page).
