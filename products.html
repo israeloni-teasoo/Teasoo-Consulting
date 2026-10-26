@@ -6,6 +6,38 @@
 <title>Products | Teasoo Consulting</title>
 <meta name="description" content="Software built by Teasoo Consulting for African organisations, including ESG Horizon (IFRS-ready ESG reporting) and Teasoo SET (stakeholder engagement tracker). More products in development.">
 <link rel="stylesheet" href="assets/css/style.css?v=6">
+<style>
+  .psplit{display:grid;grid-template-columns:1fr 1fr;width:100%;min-height:520px}
+  .psplit .ps-text{display:flex;align-items:center;padding:clamp(44px,6vw,86px);color:#fff}
+  .psplit .ps-inner{max-width:560px}
+  .psplit .ps-visual{display:flex;align-items:center;justify-content:center;padding:clamp(32px,4vw,56px)}
+  .psplit--imgleft .ps-text{order:2}.psplit--imgleft .ps-visual{order:1}
+  .psplit h2{color:#fff;font-size:clamp(1.9rem,3.6vw,2.8rem);margin:.15em 0 .1em}
+  .psplit .ps-tag{color:rgba(255,255,255,.9);font-weight:700;margin:0 0 .9em}
+  .psplit .ps-text p{color:rgba(255,255,255,.88)}
+  .ps-eyebrow{text-transform:uppercase;letter-spacing:.14em;font-weight:800;font-size:.74rem;color:rgba(255,255,255,.85);display:inline-flex;align-items:center;gap:10px;margin-bottom:12px}
+  .ps-live{font-size:.62rem;letter-spacing:.1em;background:rgba(255,255,255,.22);border-radius:999px;padding:3px 9px}
+  .ps-points{list-style:none;margin:16px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+  .ps-points li{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:6px 13px;font-size:.83rem;font-weight:600}
+  .psplit .btnrow{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap}
+  .psplit--teal .ps-text{background:linear-gradient(135deg,#0d7d78,#109b95)}
+  .psplit--teal .ps-visual{background:#e8f6f2}
+  .psplit--navy .ps-text{background:linear-gradient(135deg,#0b1a2e,#12294a)}
+  .psplit--navy .ps-visual{background:#0e2038}
+  .ps-dash{background:#fff;border-radius:16px;box-shadow:0 24px 60px rgba(0,0,0,.3);padding:20px;width:100%;max-width:360px;color:var(--ink)}
+  .ps-dash .dh{font-size:.82rem;font-weight:700;margin-bottom:12px}
+  .ps-dash .k{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:12px}
+  .ps-dash .k .n{font-size:1.4rem;font-weight:800;line-height:1}
+  .ps-dash .k .n.g{color:#16a34a}.ps-dash .k .l{font-size:.64rem;color:var(--muted);margin-top:3px}
+  .ps-dash .lab{font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700;margin:4px 0 5px}
+  .ps-dash .bar{height:9px;border-radius:6px;overflow:hidden;display:flex}
+  .ps-dash .bar i:nth-child(1){width:62%;background:#16a34a}.ps-dash .bar i:nth-child(2){width:26%;background:#e39a1a}.ps-dash .bar i:nth-child(3){width:12%;background:var(--red)}
+  .ps-dash .esc{border:1px solid var(--line);border-radius:9px;padding:9px 11px;display:flex;align-items:center;gap:10px;margin-top:8px}
+  .ps-dash .esc .p{font-size:.56rem;font-weight:800;letter-spacing:.04em;padding:3px 7px;border-radius:5px;flex:none}
+  .ps-dash .esc .p.c{background:#fde7ea;color:var(--red)}.ps-dash .esc .p.e{background:#fdf1de;color:#b57715}
+  .ps-dash .esc .t{font-size:.76rem;font-weight:700}.ps-dash .esc .r{font-size:.62rem;color:var(--muted)}
+  @media (max-width:900px){.psplit{grid-template-columns:1fr}.psplit--imgleft .ps-text,.psplit--imgleft .ps-visual{order:0}.psplit .ps-visual{min-height:300px}}
+</style>
 </head>
 <body>
 
@@ -104,70 +136,80 @@
   </div>
 </section>
 
-<!-- ===================== FEATURED PRODUCT ===================== -->
+<!-- ===================== LINE-UP INTRO ===================== -->
 <section class="section">
-  <div class="container">
-    <div class="prod-featured">
-      <div class="pf-left">
-        <span class="pf-cat">Sustainability &amp; ESG · Live</span>
-        <img class="pf-logo" src="assets/img/esg-horizon-logo.png" alt="ESG Horizon">
-        <h2>ESG Horizon</h2>
-        <p class="pf-tag">Africa's #1 IFRS-ready ESG reporting platform</p>
-        <p>Automate IFRS S1 &amp; S2 disclosures, GHG calculations and audit-ready reports, cutting ESG reporting time by up to 60% while giving your organisation a single source of truth for sustainability data.</p>
-        <div class="chips">
-          <span>IFRS S1 &amp; S2</span><span>GHG Protocol</span><span>Audit-ready</span><span>African context</span>
-        </div>
-        <div class="btnrow">
-          <a class="btn btn--teal" href="https://esghorizon.africa/" target="_blank" rel="noopener">Visit ESG Horizon →</a>
-          <a class="btn btn--teal-outline" href="esg-horizon.html">Learn more</a>
-        </div>
+  <div class="container center measure">
+    <p class="eyebrow">The line-up</p>
+    <h2>Digital solutions across organisations and industries</h2>
+    <p class="lead">Teasoo builds digital solutions that help organisations across different industries work smarter, stay compliant and unlock value. Each launched product has its own home below, and the line-up grows as new products are developed.</p>
+  </div>
+</section>
+
+<!-- ===================== ESG HORIZON ===================== -->
+<section class="psplit psplit--teal">
+  <div class="ps-text">
+    <div class="ps-inner">
+      <p class="ps-eyebrow">Sustainability &amp; ESG <span class="ps-live">Live</span></p>
+      <h2>ESG Horizon</h2>
+      <p class="ps-tag">Africa's #1 IFRS-ready ESG reporting platform</p>
+      <p>Automate IFRS S1 &amp; S2 disclosures, GHG calculations and audit-ready reports, cutting ESG reporting time by up to 60% while giving your organisation a single source of truth for sustainability data.</p>
+      <ul class="ps-points"><li>IFRS S1 &amp; S2</li><li>GHG Protocol</li><li>Audit-ready</li><li>African context</li></ul>
+      <div class="btnrow">
+        <a class="btn btn--white" href="https://esghorizon.africa/" target="_blank" rel="noopener">Visit ESG Horizon &rarr;</a>
+        <a class="btn btn--ghost" href="esg-horizon.html">Learn more</a>
       </div>
-      <div class="pf-right">
-        <div class="pf-panel">
-          <img src="assets/img/esg-horizon-logo.png" alt="ESG Horizon">
-          <div class="pf-bars"><i style="height:45%"></i><i style="height:70%"></i><i style="height:100%"></i><i style="height:60%"></i><i style="height:85%"></i></div>
-          <div class="row teal" style="width:80%"></div>
-          <div class="row sm"></div>
-          <div class="row" style="width:70%"></div>
-        </div>
-      </div>
+    </div>
+  </div>
+  <div class="ps-visual">
+    <div class="pf-panel">
+      <img src="assets/img/esg-horizon-logo.png" alt="ESG Horizon">
+      <div class="pf-bars"><i style="height:45%"></i><i style="height:70%"></i><i style="height:100%"></i><i style="height:60%"></i><i style="height:85%"></i></div>
+      <div class="row teal" style="width:80%"></div>
+      <div class="row sm"></div>
+      <div class="row" style="width:70%"></div>
     </div>
   </div>
 </section>
 
-<!-- ===================== ALL PRODUCTS GRID ===================== -->
-<section class="section section--soft" id="pipeline">
-  <div class="container">
-    <div class="measure">
-      <p class="eyebrow">The line-up</p>
-      <h2>Digital solutions across organisations and industries</h2>
-      <p class="lead">Teasoo builds digital solutions that help organisations across different industries work smarter, stay compliant and unlock value. Our launched products are live below, and the line-up grows as new products are developed.</p>
+<!-- ===================== TEASOO SET ===================== -->
+<section class="psplit psplit--navy psplit--imgleft">
+  <div class="ps-text">
+    <div class="ps-inner">
+      <p class="ps-eyebrow">Stakeholder management <span class="ps-live">Live</span></p>
+      <h2>Teasoo SET</h2>
+      <p class="ps-tag">Stakeholder Engagement Tracker</p>
+      <p>One source of truth for every stakeholder relationship. Log engagements, track risk and commitments, and give leadership a live view of every relationship, so nothing important slips.</p>
+      <ul class="ps-points"><li>One authoritative directory</li><li>Risk &amp; escalations</li><li>Commitment tracking</li><li>Leadership visibility</li></ul>
+      <div class="btnrow">
+        <a class="btn btn--white" href="teasoo-set.html">Explore Teasoo SET &rarr;</a>
+        <a class="btn btn--ghost" href="mailto:info@teasooconsulting.com?subject=Teasoo%20SET%20demo">Request a demo</a>
+      </div>
     </div>
-    <div class="grid grid-3" style="margin-top:44px">
-
-      <div class="prod-card">
-        <div class="picon" style="background:var(--teal)"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-11a8 8 0 0 0-16 0c0 7 8 11 8 11Z"/><path d="M12 2v20"/></svg></div>
-        <h3>ESG Horizon</h3>
-        <p>IFRS-ready ESG reporting: automate S1 &amp; S2 disclosures, GHG calculations and audit-ready reports.</p>
-        <div class="pfoot"><a class="learn" style="color:var(--teal-d)" href="esg-horizon.html">Learn more →</a><span class="badge badge-live">Live</span></div>
+  </div>
+  <div class="ps-visual">
+    <div class="ps-dash">
+      <div class="dh">Leadership portfolio</div>
+      <div class="k">
+        <div><div class="n">240</div><div class="l">Stakeholders</div></div>
+        <div><div class="n">2</div><div class="l">Escalations</div></div>
+        <div><div class="n g">68%</div><div class="l">Supportive</div></div>
       </div>
-
-      <div class="prod-card">
-        <div class="picon" style="background:var(--red)"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg></div>
-        <h3>Teasoo SET</h3>
-        <p>Stakeholder Engagement Tracker: one source of truth for every relationship, with live risk, escalations and commitments for leadership.</p>
-        <div class="pfoot"><a class="learn" href="teasoo-set.html">Learn more →</a><span class="badge badge-live">Live</span></div>
-      </div>
-
-      <div class="prod-card" style="display:flex;align-items:center;justify-content:center;text-align:center">
-        <div>
-          <h3 style="margin-bottom:.3em">Building something with Teasoo?</h3>
-          <p style="max-width:420px;margin:0 auto 14px">Tell us the problem you're trying to solve. We build digital solutions for organisations across industries.</p>
-          <a class="btn btn--red" href="index.html#contact">Talk to our team</a>
-        </div>
-      </div>
-
+      <div class="lab">Sentiment mix</div>
+      <div class="bar"><i></i><i></i><i></i></div>
+      <div class="lab" style="margin-top:12px">Escalations</div>
+      <div class="esc"><span class="p c">CRITICAL</span><div><div class="t">National Telecoms Commission</div><div class="r">Regulatory</div></div></div>
+      <div class="esc"><span class="p e">ELEVATED</span><div><div class="t">Riverside Community Council</div><div class="r">Corporate Affairs</div></div></div>
     </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT BAND ===================== -->
+<section class="section section--soft">
+  <div class="container center measure">
+    <p class="eyebrow">Work with us</p>
+    <h2>Building something with Teasoo?</h2>
+    <p class="lead" style="margin:0 auto 20px">Tell us the problem you're trying to solve. We build digital solutions for organisations across different industries.</p>
+    <a class="btn btn--red" href="index.html#contact">Talk to our team</a>
   </div>
 </section>
 
