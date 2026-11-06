@@ -41,23 +41,25 @@
   .edo-stats .n{font-size:1.8rem;font-weight:800;color:#fff;line-height:1;letter-spacing:-.01em}
   .edo-stats .l{font-size:.82rem;color:#bfe6c8;margin-top:6px;max-width:17ch}
   .edo-src{margin-top:18px;font-size:.76rem;color:#9fc7a9}
-  /* Before/after slider */
-  .ba{position:relative;max-width:1000px;margin:36px auto 0;aspect-ratio:16/9;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-lg);touch-action:none}
-  .ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
-  .ba .ba-before{z-index:1}
-  .ba .ba-lbl{position:absolute;top:14px;z-index:3;padding:5px 12px;border-radius:999px;font-size:.66rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:rgba(0,0,0,.5)}
-  .ba .ba-lbl.l{left:14px}
-  .ba .ba-lbl.r{right:14px}
-  .ba-handle{position:absolute;top:0;bottom:0;left:50%;z-index:2;width:3px;background:#fff;transform:translateX(-50%);cursor:ew-resize}
-  .ba-handle::after{content:"\2194";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:44px;height:44px;border-radius:50%;background:#fff;color:var(--green-d);font-weight:800;font-size:1.05rem;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 12px rgba(0,0,0,.35)}
-  /* Transformation timeline */
-  .tline{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:48px}
-  .tstage .ts-img{height:150px;border-radius:12px;background-size:cover;background-position:center;box-shadow:var(--shadow)}
-  .tstage .ts-yr{display:inline-block;margin-top:14px;font-size:.66rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--green-d);background:var(--sand);border-radius:999px;padding:4px 11px}
-  .tstage h3{font-size:1.02rem;margin:.5em 0 .25em}
-  .tstage p{font-size:.85rem;color:var(--slate);margin:0}
-  @media (max-width:900px){.tline{grid-template-columns:1fr 1fr}}
-  @media (max-width:560px){.tline{grid-template-columns:1fr}.ba{aspect-ratio:4/3}}
+  /* Why-it-matters story cards */
+  .why-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .18s ease,box-shadow .18s ease}
+  .why-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+  .why-card .wc-img{height:172px;background-size:cover;background-position:center}
+  .why-card .wc-body{padding:24px}
+  .why-card h3{margin:0 0 .4em}
+  .why-card p{font-size:.95rem;color:var(--slate);margin:0}
+  /* Carbon-credit flow graphic */
+  .cflow{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px}
+  .cstep{position:relative;background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px 18px;text-align:center;box-shadow:var(--shadow)}
+  .cstep .ci{width:54px;height:54px;margin:0 auto 14px;border-radius:14px;background:var(--sand);display:flex;align-items:center;justify-content:center}
+  .cstep .ci svg{width:26px;height:26px;color:var(--green-d);fill:none;stroke:currentColor;stroke-width:2}
+  .cstep h4{font-size:1rem;margin:0 0 .35em;color:var(--ink)}
+  .cstep p{font-size:.84rem;color:var(--slate);margin:0}
+  .cstep:not(:last-child)::after{content:"\2192";position:absolute;right:-12px;top:50%;transform:translateY(-50%);z-index:2;color:var(--green);font-weight:800;font-size:1.4rem}
+  .cchips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:30px}
+  .cchips span{background:var(--sand);color:var(--green-d);border:1px solid var(--line);border-radius:999px;padding:7px 15px;font-weight:700;font-size:.85rem}
+  @media (max-width:820px){.cflow{grid-template-columns:1fr 1fr}.cstep:not(:last-child)::after{display:none}}
+  @media (max-width:480px){.cflow{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -157,15 +159,6 @@
   </div>
 </section>
 
-<!-- ===================== INTRO BAND ===================== -->
-<section class="ta-intro">
-  <div class="container">
-    <p>Teasoo Consulting is a <strong>full-cycle reforestation and carbon-offset partner</strong>.</p>
-    <p>We take nature-based commitments from ambition to measurable impact, shaping the strategy, raising the trees, mobilising communities and governments, and developing the carbon that makes a programme endure.</p>
-    <p>From strategy to a standing forest, Teasoo is your partner.</p>
-  </div>
-</section>
-
 <!-- ===================== AGGREGATE STATS ===================== -->
 <section class="ta-stats">
   <div class="container">
@@ -184,9 +177,9 @@
       <p class="lead">Reforestation is more than planting trees. It rebuilds the living systems that land, climate and communities depend on, and turns a climate commitment into something that lasts.</p>
     </div>
     <div class="grid grid-3" style="margin-top:44px">
-      <div class="card"><h3>Forests are life-support</h3><p>A healthy forest rebuilds soil, cools and cleans the air, shelters wildlife and protects water, while giving communities food, income and shelter. When forest is lost, all of that goes with it.</p></div>
-      <div class="card"><h3>Trees are carbon, captured</h3><p>As they grow, trees draw carbon dioxide from the air and lock it away in wood and soil. Measured and verified to international methodology, that carbon becomes credits that fund the planting and the people who protect it.</p></div>
-      <div class="card"><h3>Restoration that lasts</h3><p>New forests take decades to mature and only count if they are never cleared again. That is why we plant diverse native species, protect what still stands, and govern every programme for the long term.</p></div>
+      <div class="why-card"><div class="wc-img" style="background-image:url('assets/img/forest-canopy.jpg')"></div><div class="wc-body"><h3>Forests are life-support</h3><p>A healthy forest rebuilds soil, cools and cleans the air, shelters wildlife and protects water, while giving communities food, income and shelter. When forest is lost, all of that goes with it.</p></div></div>
+      <div class="why-card"><div class="wc-img" style="background-image:url('assets/img/t4l-mahogany.jpg')"></div><div class="wc-body"><h3>Trees are carbon, captured</h3><p>As they grow, trees draw carbon dioxide from the air and lock it away in wood and soil. Measured and verified to international methodology, that carbon becomes credits that fund the planting and the people who protect it.</p></div></div>
+      <div class="why-card"><div class="wc-img" style="background-image:url('assets/img/t4l-sapling.jpg')"></div><div class="wc-body"><h3>Restoration that lasts</h3><p>New forests take decades to mature and only count if they are never cleared again. That is why we plant diverse native species, protect what still stands, and govern every programme for the long term.</p></div></div>
     </div>
   </div>
 </section>
@@ -207,59 +200,7 @@
       <p class="edo-src">Sources: Global Forest Watch; Forest Trends.</p>
     </div>
   </div>
-  <div class="img" style="background-image:url('assets/img/aerial-forest.jpg')"></div>
-</section>
-
-<!-- ===================== TRANSFORMATION STORY ===================== -->
-<section class="section section--soft">
-  <div class="container">
-    <div class="measure">
-      <p class="eyebrow" style="color:var(--green)">The transformation</p>
-      <h2>From bare ground to a standing forest</h2>
-      <p class="lead">Reforestation is a story that unfolds over decades. Satellite monitoring lets us watch the same land change, year by year, from degraded reserve to dense, living forest.</p>
-    </div>
-
-    <div class="ba" id="ba1">
-      <img class="ba-after" src="assets/img/t4l-drone-canopy.jpg" alt="The same land restored to dense forest">
-      <img class="ba-before" src="assets/img/aerial-forest.jpg" alt="Degraded, thinned forest land before restoration" style="clip-path:inset(0 50% 0 0)">
-      <span class="ba-lbl l">Before</span>
-      <span class="ba-lbl r">Restored</span>
-      <div class="ba-handle"></div>
-    </div>
-
-    <div class="tline">
-      <div class="tstage">
-        <div class="ts-img" style="background-image:url('assets/img/aerial-forest.jpg')"></div>
-        <span class="ts-yr">Before</span>
-        <h3>Degraded land</h3>
-        <p>A thinned, cleared reserve: eroding soil, lost wildlife and carbon leaking back to the air.</p>
-      </div>
-      <div class="tstage">
-        <div class="ts-img" style="background-image:url('assets/img/t4l-watering.jpg')"></div>
-        <span class="ts-yr">Year 0 to 1</span>
-        <h3>Nurseries &amp; planting</h3>
-        <p>Indigenous seedlings are raised and planted across the reserve with host communities.</p>
-      </div>
-      <div class="tstage">
-        <div class="ts-img" style="background-image:url('assets/img/t4l-rows.jpg')"></div>
-        <span class="ts-yr">Years 2 to 5</span>
-        <h3>A young forest</h3>
-        <p>Saplings establish, the canopy begins to close and carbon starts to accumulate.</p>
-      </div>
-      <div class="tstage">
-        <div class="ts-img" style="background-image:url('assets/img/t4l-mahogany.jpg')"></div>
-        <span class="ts-yr">Years 5 to 15</span>
-        <h3>The forest thickens</h3>
-        <p>Habitat returns, biodiversity rebounds and carbon builds year on year.</p>
-      </div>
-      <div class="tstage">
-        <div class="ts-img" style="background-image:url('assets/img/t4l-drone-canopy.jpg')"></div>
-        <span class="ts-yr">Decades on</span>
-        <h3>A standing forest</h3>
-        <p>A dense, living forest that locks away carbon for generations and sustains communities.</p>
-      </div>
-    </div>
-  </div>
+  <div class="img" style="background-image:url('assets/img/t4l-drone-canopy.jpg')"></div>
 </section>
 
 <!-- ===================== WHAT WE DO ===================== -->
@@ -278,6 +219,27 @@
       <div class="card"><h3>Capacity building &amp; community empowerment</h3><p>We train and equip local people with durable skills, green jobs and livelihoods, so communities own and sustain the forest long after planting.</p></div>
       <div class="card"><h3>Carbon offset &amp; credit development</h3><p>We develop the carbon side to international methodology, with the measurement, monitoring, reporting, and verification and validation readiness support that makes credits credible.</p></div>
     </div>
+  </div>
+</section>
+
+<!-- ===================== CARBON CREDITS ===================== -->
+<section class="section">
+  <div class="container">
+    <div class="measure">
+      <p class="eyebrow" style="color:var(--green)">Carbon credits &amp; climate goals</p>
+      <h2>Turn a growing forest into carbon credits</h2>
+      <p class="lead">For companies, reforestation is more than good for the planet. The carbon your forest captures can be verified and issued as carbon credits: a credible way to offset emissions and meet climate commitments.</p>
+    </div>
+    <div class="cflow">
+      <div class="cstep"><div class="ci"><svg viewBox="0 0 24 24"><path d="M3 21h18M4 21V11l5 3V11l5 3V7l6 4v10"/><path d="M9 21v-4M14 21v-4"/></svg></div><h4>Emissions to offset</h4><p>Your organisation has a carbon footprint it needs to reduce and offset.</p></div>
+      <div class="cstep"><div class="ci"><svg viewBox="0 0 24 24"><path d="M12 22v-6M9 16h6M12 2a6 6 0 0 0-4 10.5A5 5 0 1 0 12 22a5 5 0 1 0 4-9.5A6 6 0 0 0 12 2Z"/></svg></div><h4>Forests capture it</h4><p>As the trees grow, they draw CO&#8322; from the air and lock it into wood and soil.</p></div>
+      <div class="cstep"><div class="ci"><svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4Z"/><path d="M9 12l2 2 4-4"/></svg></div><h4>Verified as credits</h4><p>The carbon is measured and verified to international methodology. One credit equals one tonne of CO&#8322;.</p></div>
+      <div class="cstep"><div class="ci"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg></div><h4>Offset &amp; comply</h4><p>Retire the credits to offset emissions and strengthen your sustainability and reporting.</p></div>
+    </div>
+    <div class="cchips">
+      <span>1 credit = 1 tonne CO&#8322;</span><span>Verra-aligned methodology</span><span>Nigeria carbon market</span><span>Article 6, Paris Agreement</span><span>Net-zero by 2060</span>
+    </div>
+    <p class="center measure" style="margin-top:22px;color:var(--muted);font-size:.9rem">Nigeria has committed to cutting emissions 20% by 2030 under its NDC and to net-zero by 2060, and has launched a national carbon market framework aligned with Article 6 of the Paris Agreement, with reforestation among its recognised project types.</p>
   </div>
 </section>
 
@@ -479,17 +441,6 @@
     c.querySelector('.tc-prev').addEventListener('click',function(){go(i-1);start();});
     start();
   });
-  // Before/after slider
-  (function(){
-    var ba=document.getElementById('ba1'); if(!ba) return;
-    var before=ba.querySelector('.ba-before'), handle=ba.querySelector('.ba-handle'), drag=false;
-    function set(p){p=Math.max(0,Math.min(100,p)); before.style.clipPath='inset(0 '+(100-p)+'% 0 0)'; handle.style.left=p+'%';}
-    function move(e){var r=ba.getBoundingClientRect(); var x=(e.touches?e.touches[0].clientX:e.clientX)-r.left; set(x/r.width*100);}
-    ba.addEventListener('pointerdown',function(e){drag=true; move(e);});
-    window.addEventListener('pointermove',function(e){if(drag) move(e);});
-    window.addEventListener('pointerup',function(){drag=false;});
-    set(50);
-  })();
 </script>
 </body>
 </html>
