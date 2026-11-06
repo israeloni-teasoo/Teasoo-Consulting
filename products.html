@@ -36,6 +36,23 @@
   .ps-dash .esc .p{font-size:.56rem;font-weight:800;letter-spacing:.04em;padding:3px 7px;border-radius:5px;flex:none}
   .ps-dash .esc .p.c{background:#fde7ea;color:var(--red)}.ps-dash .esc .p.e{background:#fdf1de;color:#b57715}
   .ps-dash .esc .t{font-size:.76rem;font-weight:700}.ps-dash .esc .r{font-size:.62rem;color:var(--muted)}
+  .psplit--green .ps-text{background:linear-gradient(135deg,#0f5a2c,#1a7a3c)}
+  .psplit--green .ps-visual{background:#eaf5ec}
+  /* TMS map mock */
+  .ps-map{background:#fff;border-radius:16px;box-shadow:0 24px 60px rgba(0,0,0,.3);padding:18px;width:100%;max-width:370px;color:var(--ink)}
+  .ps-map .mh{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+  .ps-map .mh b{font-size:.82rem}
+  .ps-map .off{font-size:.56rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;background:#eafbe9;color:#167a2e;border-radius:5px;padding:3px 8px}
+  .ps-map .mv{position:relative;height:160px;border-radius:10px;overflow:hidden;background:linear-gradient(135deg,#dcefe0,#bfe6c8)}
+  .ps-map .mv::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.5) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.5) 1px,transparent 1px);background-size:26px 26px}
+  .ps-map .pin{position:absolute;width:10px;height:10px;border-radius:50%;background:#1a7a3c;border:2px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.3)}
+  .ps-map .pin.a{background:#e39a1a}
+  .ps-map .mk{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}
+  .ps-map .mk .n{font-size:1.3rem;font-weight:800;line-height:1}
+  .ps-map .mk .n.g{color:#16a34a}.ps-map .mk .l{font-size:.62rem;color:var(--muted);margin-top:3px}
+  .ps-map .rec{display:flex;align-items:center;gap:9px;border:1px solid var(--line);border-radius:9px;padding:8px 11px;margin-top:10px}
+  .ps-map .rec .ic{width:26px;height:26px;border-radius:7px;background:var(--sand);display:flex;align-items:center;justify-content:center;color:var(--green-d);font-weight:800;font-size:.8rem}
+  .ps-map .rec .t{font-size:.76rem;font-weight:700}.ps-map .rec .r{font-size:.62rem;color:var(--muted)}
   @media (max-width:900px){.psplit{grid-template-columns:1fr}.psplit--imgleft .ps-text,.psplit--imgleft .ps-visual{order:0}.psplit .ps-visual{min-height:300px}}
 </style>
 </head>
@@ -90,6 +107,7 @@
           <ul class="submenu">
             <li><a href="esg-horizon.html">ESG Horizon <span class="flag flag--live">LIVE</span></a></li>
             <li><a href="teasoo-set.html">Teasoo SET <span class="flag flag--live">LIVE</span></a></li>
+            <li><a href="products.html#tms">Teasoo TMS <span class="flag flag--live">LIVE</span></a></li>
             <li><a href="products.html">All Products</a></li>
             <li><a href="products.html#pipeline" style="color:var(--muted)">More coming soon…</a></li>
           </ul>
@@ -199,6 +217,43 @@
       <div class="lab" style="margin-top:12px">Escalations</div>
       <div class="esc"><span class="p c">CRITICAL</span><div><div class="t">National Telecoms Commission</div><div class="r">Regulatory</div></div></div>
       <div class="esc"><span class="p e">ELEVATED</span><div><div class="t">Riverside Community Council</div><div class="r">Corporate Affairs</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TEASOO TMS ===================== -->
+<section class="psplit psplit--green" id="tms">
+  <div class="ps-text">
+    <div class="ps-inner">
+      <p class="ps-eyebrow">Reforestation technology <span class="ps-live">Live</span></p>
+      <h2>Teasoo TMS</h2>
+      <p class="ps-tag">Tree Management System</p>
+      <p>An offline-first reforestation registry. Field officers record every tree on an Android app, even without a signal, while admins and executives track progress on a live web portal and dashboard.</p>
+      <ul class="ps-points"><li>Works offline in the field</li><li>Map-based tree registry</li><li>Executive dashboard</li></ul>
+      <div class="btnrow">
+        <a class="btn btn--white" href="https://tms.teasooconsulting.com" target="_blank" rel="noopener">Visit Teasoo TMS &rarr;</a>
+        <a class="btn btn--ghost" href="mailto:info@teasooconsulting.com?subject=Teasoo%20TMS%20demo">Request a demo</a>
+      </div>
+    </div>
+  </div>
+  <div class="ps-visual">
+    <div class="ps-map">
+      <div class="mh"><b>Planting area</b><span class="off">Offline ready</span></div>
+      <div class="mv">
+        <span class="pin" style="left:18%;top:28%"></span>
+        <span class="pin" style="left:34%;top:54%"></span>
+        <span class="pin" style="left:52%;top:33%"></span>
+        <span class="pin a" style="left:63%;top:62%"></span>
+        <span class="pin" style="left:74%;top:40%"></span>
+        <span class="pin" style="left:44%;top:74%"></span>
+        <span class="pin" style="left:82%;top:70%"></span>
+      </div>
+      <div class="mk">
+        <div><div class="n">12,480</div><div class="l">Trees recorded</div></div>
+        <div><div class="n g">91%</div><div class="l">Survival rate</div></div>
+        <div><div class="n">48 ha</div><div class="l">Mapped</div></div>
+      </div>
+      <div class="rec"><span class="ic">#</span><div><div class="t">Mahogany &middot; Plot B-14</div><div class="r">Recorded offline &middot; syncs when online</div></div></div>
     </div>
   </div>
 </section>
